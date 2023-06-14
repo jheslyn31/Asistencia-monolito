@@ -12,8 +12,8 @@ def create_app():
     )
 
     #Registrar Bluprint
-    from . import  todo
-    app.register_blueprint(todo.bp)
+    from . import  persona
+    app.register_blueprint(persona.bp)
 
     # Crear aplicación de flask
     @app.route('/')
