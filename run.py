@@ -1,4 +1,4 @@
-from asist import create_app
+from aplicacion import create_app
 
 if __name__ == '__main__':
     app = create_app()
