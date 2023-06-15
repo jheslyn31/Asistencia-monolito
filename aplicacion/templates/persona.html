@@ -22,8 +22,11 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>Nombre</th>
+                        <th>Persona_Id</th>
+                        <th>Nombre_Apellidos</th>                        
                         <th>Correo</th>
+                        <th>Hora_entrada_max</th>
+                        <th>Hora_salida_min</th>
                         <th>Equipo</th>
                         <th></th>
                         <th></th>
@@ -31,10 +34,11 @@
                 </thead>
                 <tbody class="table-border-bottom-0">
                     <tr>
-                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i>
-                            <strong>Jheslyn Lagos</strong>
-                        </td>
+                        <td>1</td>
+                        <td>Jheslyn Lagos</td>
                         <td>j.lagos@isystem-integration</td>
+                        <td>9:10</td>
+                        <td>5:00</td>
                         <td>Desarrolador</td>
                         <td>
                             <button type="button" class="btn btn-icon btn-primary" data-bs-toggle="tooltip"
@@ -67,7 +71,7 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col mb-3">
-                        <label for="nameBasic" class="form-label">Nombre</label>
+                        <label for="nameBasic" class="form-label">Nombre_Apellidos</label>
                         <input type="text" id="nameBasic" class="form-control" placeholder="xxx" />
                     </div>
                 </div>
@@ -77,14 +81,24 @@
                         <input type="text" id="emailBasic" class="form-control" placeholder="xxxx@xxx.xx" />
                     </div>
                     <div class="col mb-0">
-                        <label for="dobBasic" class="form-label">Área</label>
+                        <label for="emailBasic" class="form-label">Hora_entrada_max</label>
+                        <input type="text" id="emailBasic" class="form-control" placeholder="09:09" />
+                    </div>                                     
+                </div>
+                <div class="row g-2">                    
+                    <div class="col mb-0">
+                        <label for="emailBasic" class="form-label">Hora_salida_min</label>
+                        <input type="text" id="emailBasic" class="form-control" placeholder="17:00" />
+                    </div>
+                    <div class="col mb-0">
+                        <label for="dobBasic" class="form-label">Equipo</label>
                         <select id="defaultSelect" class="form-select">
                             <option hidden>Seleccionar área</option>
                             <option value="1">Marketing</option>
                             <option value="2">Desarrollo</option>
                             <option value="3">Soporte</option>
                         </select>
-                    </div>
+                    </div>   
                 </div>
             </div>
             <div class="modal-footer">

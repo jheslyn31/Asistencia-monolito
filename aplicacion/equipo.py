@@ -13,3 +13,7 @@ def update():
 @bp.route('/delete')
 def delete():
     return 'eliminar equipo'
+
+@bp.route('/listar')
+def listar():
+    return 'eliminar equipo'

@@ -8,12 +8,12 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>TodoAsis -{%block title %} {% endblock %}</title>
+    <title>Asistencia -{%block title %} {% endblock %}</title>
 
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename ='img/favicon/favicon.ico')}}" />
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename ='img/favicon/favicon.ico')}}"/>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -55,7 +55,7 @@
             <!-- Menu -->
             <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
                 <div class="app-brand demo">
-                    <a href="#" class="app-brand-link">
+                    <a href="{{url_for('home.reporte')}}" class="app-brand-link">
                         <span class="app-brand-logo demo">
                             <img src="{{url_for('static', filename ='img/icons/unicons/is.png')}}" alt="is" class="me-3"
                                 height="30">
@@ -85,6 +85,12 @@
                             <div data-i18n="Analytics">Persona</div>
                         </a>
                     </li>
+                    <li class="menu-item">
+                        <a href="{{url_for('home.equipo')}}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-group"></i>
+                            <div data-i18n="Analytics">Equipo</div>
+                        </a>
+                    </li>
                 </ul>
             </aside>
             <!-- / Menu -->
@@ -100,13 +106,7 @@
                     </div>
 
                     <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-                        <ul class="navbar-nav flex-row align-items-center ms-auto">
-                            <!-- Place this tag where you want the button to render. -->
-                            <li class="nav-item lh-1 me-3">
-                                <a class="dropdown-item" href="#">
-                                    <i class="tf-icons bx bx-bell"></i>
-                                </a>
-                            </li>
+                        <ul class="navbar-nav flex-row align-items-center ms-auto">                            
                             <!-- User -->
                             <li class="nav-item navbar-dropdown dropdown-user dropdown">
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
@@ -152,7 +152,7 @@
                                         <div class="dropdown-divider"></div>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="index.html">
+                                        <a class="dropdown-item" href="{{url_for('home.login')}}">
                                             <i class="bx bx-power-off me-2"></i>
                                             <span class="align-middle">Cerrar Sesion</span>
                                         </a>
