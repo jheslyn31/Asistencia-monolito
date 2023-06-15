@@ -1,23 +1,15 @@
-from flask import Flask, render_template, url_for
+from flask import Blueprint, render_template
 
+bp = Blueprint('equipo', __name__, url_prefix='/equipo')
 
+@bp.route('/create')
+def create():
+    return 'crear equipo'
 
-def create_app():
-    app= Flask(__name__)
+@bp.route('/update')
+def update():
+    return 'actualizar equipo'
 
-    #configuracion del proyecto
-    app.config.from_mapping(
-        DEBUG = True,
-        SECRETE_KEY= 'dev'
-    )
-
-    #Registrar Bluprint
-    from . import  persona
-    app.register_blueprint(persona.bp)
-
-    # Crear aplicación de flask
-    @app.route('/')
-    def index():
-        return render_template('index.html')
-    
-    return app
+@bp.route('/delete')
+def delete():
+    return 'eliminar equipo'

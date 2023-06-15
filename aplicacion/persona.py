@@ -1,15 +1,15 @@
 from flask import Blueprint, render_template
 
-bp = Blueprint('todo', __name__, url_prefix='/todo')
+bp = Blueprint('persona', __name__, url_prefix='/persona')
 
-@bp.route('/asistencia')
-def index():
-    return "Lista de tareas"
+@bp.route('/create')
+def create():
+    return 'crear persona'
 
-@bp.route('/reporte')
-def reporte():
-    return render_template('todo/reporte.html')
+@bp.route('/update')
+def update():
+    return 'actualizar persona'
 
-@bp.route('/persona')
-def persona():
-    return render_template('todo/persona.html')
+@bp.route('/delete')
+def delete():
+    return 'eliminar persona'
