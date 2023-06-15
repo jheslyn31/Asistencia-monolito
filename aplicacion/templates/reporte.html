@@ -33,26 +33,3 @@
 
 
 {% endblock %}
-<script>
-    $(document).ready(function () {
-
-        $('#data-table').DataTable({
-            ajax: {
-                url: 'reporte/list',
-                dataSrc: '',
-                error: function (xhr, error, thrown) {
-                    console.log('Error:', error);
-                    console.log('Thrown error:', thrown);
-                }
-            },
-            "columns": [
-                { "data": "nombre" },
-                { "data": "fecha" },
-                { "data": "horae" },
-                { "data": "horas" },
-                { "data": "estado" },
-                { "data": "justi" }
-            ]
-        });
-    });
-</script>
