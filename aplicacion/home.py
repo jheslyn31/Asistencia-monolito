@@ -22,6 +22,6 @@ def reporte():
 def persona():
     return render_template('persona.html')
 
-@bp.route('/equipo')
-def equipo():
-    return render_template('equipo.html')
+# @bp.route('/equipo')
+# def equipo():
+#     return render_template('equipo.html')

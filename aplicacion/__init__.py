@@ -16,4 +16,7 @@ def create_app():
     from aplicacion import reporte
     app.register_blueprint(reporte.bp)
 
+    from aplicacion import equipo
+    app.register_blueprint(equipo.bp)
+
     return app
